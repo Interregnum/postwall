@@ -141,4 +141,18 @@ public class Address implements Serializable {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String toString() {
+		return "Address [" 
+				+ street1 + ", " 
+				+ street2 + ", " 
+				+ city + ", " 
+				+ state + "-"
+				+ postalCode + ", " 
+				+ country + "]";
+	}
 }
