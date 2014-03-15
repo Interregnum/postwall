@@ -2,14 +2,41 @@ package service;
 
 import java.util.Map;
 
+import domain.exception.ApplicationException;
+
+/**
+ * Interface of Service classes.
+ * @author Mengchao Zhong
+ */
 public interface ServiceInterface {
 	
-	public Void validateRequest(Map<String, Object> requestMap);
+	/**
+	 * Validate the request map.
+	 * @param requestMap
+	 * @throws {@link ApplicationException}
+	 */
+	void validateRequest(Map<String, Object> requestMap) throws ApplicationException;
 	
-	public Void checkAuthorization(Map<String, Object> requestMap);
+	/**
+	 * Execute service business logics.
+	 * @param requestMap
+	 * @return {@link Map}
+	 * @throws {@link ApplicationException}
+	 */
+	Map<String, Object> executeService(Map<String, Object> requestMap) throws ApplicationException;
 	
-	public Map<String, Object> executeService(Map<String, Object> requestMap);
+	/**
+	 * Translate the service response.
+	 * @param responseMap
+	 * @return {@link Map}
+	 * @throws {@link ApplicationException}
+	 */
+	Map<String, Object> translateResponse(Map<String, Object> responseMap) throws ApplicationException;
 	
-	public Map<String, Object> translateResponse(Map<String, Object> responseMap);
-	
+	/**
+	 * Set the privilege level that caller needs to have in order to call current service.
+	 * @param privilegeLevel
+	 * @return {@link null}
+	 */
+	void setPrivilegeLevel(Integer privilegeLevel);
 }

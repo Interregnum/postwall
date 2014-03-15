@@ -3,43 +3,55 @@ package domain;
 import java.io.Serializable;
 
 /**
- * Domain Class
- * {@link Address}
- * 
+ * Domain Class {@link Address}.
  * @author Mengchao Zhong
  */
 public class Address implements Serializable {
 
-	/** {@link long} serialVersionUID 
-	 * Default Serial Version UID */
+	/**
+	 * Default Serial Version UID.
+	 */
 	private static final long serialVersionUID = 1L;
 
-	/** {@link String} street1 */
+	/**
+	 * Street Line 1.
+	 */
 	private String street1;
 	
-	/** {@link String} street2 */
+	/**
+	 * Street Line 2.
+	 */
 	private String street2;
 	
-	/** {@link String} city */
+	/**
+	 * City.
+	 */
 	private String city;
 	
-	/** {@link String} state */
+	/**
+	 * State/Province.
+	 */
 	private String state;
 	
-	/** {@link String} postalCode */
+	/**
+	 * Postal Code.
+	 */
 	private String postalCode;
 	
-	/** {@link String} country */
+	/**
+	 * Country.
+	 */
 	private String country;
 
 	/**
-	 * Default Constructor
+	 * Constructor of {@link Address}.
 	 */
 	public Address() {
 		super();
 	}
 
 	/**
+	 * Constructor of {@link Address}.
 	 * @param street1
 	 * @param street2
 	 * @param city
@@ -59,84 +71,96 @@ public class Address implements Serializable {
 	}
 
 	/**
-	 * @return the street1
+	 * Getter of street1.
+	 * @return @{link String}
 	 */
 	public String getStreet1() {
 		return street1;
 	}
 
 	/**
-	 * @param street1 the street1 to set
+	 * Setter of street1.
+	 * @param street1
 	 */
 	public void setStreet1(String street1) {
 		this.street1 = street1;
 	}
 
 	/**
-	 * @return the street2
+	 * Getter of street2.
+	 * @return @{link String}
 	 */
 	public String getStreet2() {
 		return street2;
 	}
 
 	/**
-	 * @param street2 the street2 to set
+	 * Setter of street2.
+	 * @param street2
 	 */
 	public void setStreet2(String street2) {
 		this.street2 = street2;
 	}
 
 	/**
-	 * @return the city
+	 * Getter of city.
+	 * @return @{link String}
 	 */
 	public String getCity() {
 		return city;
 	}
 
 	/**
-	 * @param city the city to set
+	 * Setter of city.
+	 * @param city
 	 */
 	public void setCity(String city) {
 		this.city = city;
 	}
 
 	/**
-	 * @return the state
+	 * Getter of state.
+	 * @return @{link String}
 	 */
 	public String getState() {
 		return state;
 	}
 
 	/**
-	 * @param state the state to set
+	 * Setter of state.
+	 * @param state
 	 */
 	public void setState(String state) {
 		this.state = state;
 	}
 
 	/**
-	 * @return the postalCode
+	 * Getter of postalCode.
+	 * @return @{link String}
 	 */
 	public String getPostalCode() {
 		return postalCode;
 	}
 
 	/**
-	 * @param postalCode the postalCode to set
+	 * Setter of postalCode.
+	 * @param postalCode
 	 */
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
 
 	/**
-	 * @return the country
+	 * Getter of country.
+	 * @return @{link String}
 	 */
 	public String getCountry() {
 		return country;
 	}
 
 	/**
-	 * @param country the country to set
+	 * Setter of country.
+	 * @param country
 	 */
 	public void setCountry(String country) {
 		this.country = country;

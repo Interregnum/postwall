@@ -3,34 +3,41 @@ package domain;
 import java.io.Serializable;
 
 /**
- * Domain Class
- * {@link Phone}
- * 
+ * Domain Class {@link Phone}.
  * @author Mengchao Zhong
  */
 public class Phone implements Serializable {
 
-	/** {@link long} serialVersionUID 
-	 * Default Serial Version UID */
+	/**
+	 * Default Serial Version UID.
+	 */
 	private static final long serialVersionUID = 1L;
 	
-	/** {@link String} phoneType */
+	/**
+	 * Type of current phone number.
+	 * e.g. HOME/CELL/WORK
+	 */
 	private String phoneType;
 	
-	/** {@link String} phoneNumber */
+	/**
+	 * Phone number.
+	 */
 	private String phoneNumber;
 	
-	/** {@link String} primaryPhone */
+	/**
+	 * Is primary phone number?
+	 */
 	private Boolean primaryPhone;
 	
 	/**
-	 * Default Constructor
+	 * Constructor of {@link Phone}.
 	 */
 	public Phone() {
 		super();
 	}
 
 	/**
+	 * Constructor of {@link Phone}.
 	 * @param phoneType
 	 * @param phoneNumber
 	 * @param primaryPhone
@@ -43,42 +50,48 @@ public class Phone implements Serializable {
 	}
 
 	/**
-	 * @return the phoneType
+	 * Getter of phoneType.
+	 * @return @{link String}
 	 */
 	public String getPhoneType() {
 		return phoneType;
 	}
 
 	/**
-	 * @param phoneType the phoneType to set
+	 * Setter of phoneType.
+	 * @param phoneType
 	 */
 	public void setPhoneType(String phoneType) {
 		this.phoneType = phoneType;
 	}
 
 	/**
-	 * @return the phoneNumber
+	 * Getter of phoneNumber.
+	 * @return @{link String}
 	 */
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
 	/**
-	 * @param phoneNumber the phoneNumber to set
+	 * Setter of phoneNumber.
+	 * @param phoneNumber
 	 */
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
 	/**
-	 * @return the primaryPhone
+	 * Getter of primaryPhone.
+	 * @return @{link Boolean}
 	 */
 	public Boolean getPrimaryPhone() {
 		return primaryPhone;
 	}
 
 	/**
-	 * @param primaryPhone the primaryPhone to set
+	 * Setter of primaryPhone.
+	 * @param primaryPhone
 	 */
 	public void setPrimaryPhone(Boolean primaryPhone) {
 		this.primaryPhone = primaryPhone;
