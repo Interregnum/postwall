@@ -36,7 +36,6 @@ public interface ServiceInterface {
 	/**
 	 * Set the privilege level that caller needs to have in order to call current service.
 	 * @param privilegeLevel
-	 * @return {@link null}
 	 */
 	void setPrivilegeLevel(Integer privilegeLevel);
 }

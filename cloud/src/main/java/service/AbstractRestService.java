@@ -14,8 +14,8 @@ public abstract class AbstractRestService implements ServiceInterface {
 	
 	/**
 	 * Check whether the service caller is authorized or not.
-	 * @param requestMap
-	 * @return {@link null}
+	 * @param privilegeLevel
+	 * @throws ApplicationException
 	 */
 	protected void checkAuthorization(Integer privilegeLevel) throws ApplicationException {
 		
@@ -27,7 +27,7 @@ public abstract class AbstractRestService implements ServiceInterface {
 	 * @param map
 	 * @param key
 	 * @param error
-	 * @return {@link null}
+	 * @return {@link Void}
 	 */
 	protected Void checkRequiredField(final Map<String, Object> map, final String key, final StringBuilder error) {
 		final Locale defaultLocale = Locale.getDefault();
