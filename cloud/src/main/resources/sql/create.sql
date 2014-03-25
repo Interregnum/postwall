@@ -59,13 +59,17 @@ CREATE TABLE credential
 
 CREATE TABLE contact
 (
-	user_id		INT		NOT NULL,
-	phone_id	INT,
-	address_id	INT,
-	email_id	INT 	NOT NULL,
+	user_id					INT		NOT NULL,
+	primary_phone_id		INT,
+	phone_2_id				INT,
+	phone_3_id				INT,
+	address_id				INT,
+	email_id				INT 	NOT NULL,
 	UNIQUE (user_id, phone_id, address_id, email_id),
 	FOREIGN KEY (user_id) REFERENCES credential(user_id),
-	FOREIGN KEY (phone_id) REFERENCES phone(id),
+	FOREIGN KEY (primary_phone_id) REFERENCES phone(id),
+	FOREIGN KEY (phone_2_id) REFERENCES phone(id),
+	FOREIGN KEY (phone_3_id) REFERENCES phone(id),
 	FOREIGN KEY (address_id) REFERENCES address(id),
 	FOREIGN KEY (email_id) REFERENCES email(id)
 );
