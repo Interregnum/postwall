@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.mapper.ContactMapper">
+	<select id="selectAllContact" resultMap="ContactMapper">
+		SELECT * FROM contact
+	</select>
+	
+	<resultMap type="domain.Contact" id="ContactMapper" autoMapping="true">
+		<result property="userId" column="user_id" />
+		<result property="phone1Id" column="phone_1_id" />
+		<result property="phone2Id" column="phone_2_id" />
+		<result property="phone3Id" column="phone_3_id" />
+		<result property="addressId" column="address_id" />
+		<result property="emailId" column="email_id" />
+	</resultMap>
+</mapper>
