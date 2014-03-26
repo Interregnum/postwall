@@ -46,7 +46,7 @@ public class Contact implements Serializable {
 	/**
 	 * Constructor of {@link Contact}.
 	 */
-	private Contact() {
+	public Contact() {
 		super();
 	}
 
@@ -59,7 +59,7 @@ public class Contact implements Serializable {
 	 * @param addressId
 	 * @param emailId
 	 */
-	private Contact(int userId, int phone1Id, int phone2Id, int phone3Id,
+	public Contact(int userId, int phone1Id, int phone2Id, int phone3Id,
 			int addressId, int emailId) {
 		super();
 		this.userId = userId;
@@ -164,5 +164,19 @@ public class Contact implements Serializable {
 	 */
 	public void setEmailId(int emailId) {
 		this.emailId = emailId;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String toString() {
+		return "Contact: [userId = " 
+				+ userId + ", phone1Id = " 
+				+ phone1Id + ", phone2Id = " 
+				+ phone2Id + ", phone3Id = " 
+				+ phone3Id + ", addressId = " 
+				+ addressId + ", emailId = " 
+				+ emailId + "]";
 	}
 }

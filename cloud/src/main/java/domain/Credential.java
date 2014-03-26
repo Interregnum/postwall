@@ -56,7 +56,7 @@ public class Credential implements Serializable {
 	/**
 	 * Constructor of {@link Credential}.
 	 */
-	private Credential() {
+	public Credential() {
 		super();
 	}
 
@@ -71,7 +71,7 @@ public class Credential implements Serializable {
 	 * @param securityQuestion2Id
 	 * @param securityAnswer2
 	 */
-	private Credential(int userId, String username, String password,
+	public Credential(int userId, String username, String password,
 			int emailId, int securityQuestion1Id, String securityAnswer1,
 			int securityQuestion2Id, String securityAnswer2) {
 		super();
@@ -211,5 +211,21 @@ public class Credential implements Serializable {
 	 */
 	public void setSecurityAnswer2(String securityAnswer2) {
 		this.securityAnswer2 = securityAnswer2;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String toString() {
+		return "Credential: [userId = " 
+				+ userId + ", username = " 
+				+ username + ", password = " 
+				+ password + ", emailId = " 
+				+ emailId + ", securityQuestion1Id = " 
+				+ securityQuestion1Id + ", securityAnswer1 = " 
+				+ securityAnswer1 + ", securityQuestion2Id = " 
+				+ securityQuestion2Id + ", securityAnswer2 = " 
+				+ securityAnswer2 + "]";
 	}
 }

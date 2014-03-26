@@ -16,7 +16,7 @@ public class Address implements Serializable {
 	/**
 	 * Address ID.
 	 */
-	private int addressId;
+	private int id;
 	
 	/**
 	 * Address Alias.
@@ -62,7 +62,7 @@ public class Address implements Serializable {
 
 	/**
 	 * Constructor of {@link Address}.
-	 * @param addressId
+	 * @param id
 	 * @param alias
 	 * @param street1
 	 * @param street2
@@ -71,11 +71,10 @@ public class Address implements Serializable {
 	 * @param postalCode
 	 * @param country
 	 */
-	public Address(int addressId, String alias, String street1,
-			String street2, String city, String state, String postalCode,
-			String country) {
+	public Address(int id, String alias, String street1, String street2,
+			String city, String state, String postalCode, String country) {
 		super();
-		this.addressId = addressId;
+		this.id = id;
 		this.alias = alias;
 		this.street1 = street1;
 		this.street2 = street2;
@@ -86,19 +85,19 @@ public class Address implements Serializable {
 	}
 
 	/**
-	 * Getter of addressId.
+	 * Getter of id.
 	 * @return @{link int}
 	 */
-	public int getAddressId() {
-		return addressId;
+	public int getId() {
+		return id;
 	}
 
 	/**
-	 * Setter of addressId.
-	 * @param addressId
+	 * Setter of id.
+	 * @param id
 	 */
-	public void setAddressId(int addressId) {
-		this.addressId = addressId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	/**
@@ -219,7 +218,7 @@ public class Address implements Serializable {
 	@Override
 	public String toString() {
 		return "Address(" 
-				+ addressId + ") - " 
+				+ id + ") - " 
 				+ alias + ": [" 
 				+ street1 + ", " 
 				+ street2 + ", " 

@@ -3,60 +3,108 @@ package domain;
 import java.io.Serializable;
 
 /**
- * @author TING CHEN
- *
+ * Domain Class {@link Email}.
+ * @author Ting Chen
+ * @author Mengchao Zhong
  */
-public class Email implements Serializable{
+public class Email implements Serializable {
+	
 	/**
 	 * Default Serial Version UID.
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	/**
+	 * Email ID.
+	 */
+	private int id;
 
 	/**
-	 * primary_email
+	 * Primary Email.
 	 */
-	private String primary_email;
+	private String primaryEmail;
 
 	/**
-	 * alternative_email
+	 * Alternative Email.
 	 */
-	private String alternative_email;
+	private String alternativeEmail;
+	
 	/**
 	 * Constructor of {@link Email}.
-	 * @param primary_email
-	 * @param alternative_email
 	 */
-	public Email(String primary_email, String alternative_email) {
+	public Email() {
 		super();
-		this.primary_email = primary_email;
-		this.alternative_email = alternative_email;
 	}
+
 	/**
-	 * Getter of primary_email.
+	 * Constructor of {@link Email}.
+	 * @param id
+	 * @param primaryEmail
+	 * @param alternativeEmail
+	 */
+	public Email(int id, String primaryEmail, String alternativeEmail) {
+		super();
+		this.id = id;
+		this.primaryEmail = primaryEmail;
+		this.alternativeEmail = alternativeEmail;
+	}
+
+	/**
+	 * Getter of id.
+	 * @return @{link int}
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * Setter of id.
+	 * @param id
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * Getter of primaryEmail.
 	 * @return @{link String}
 	 */
-	public String getPrimary_email() {
-		return this.primary_email;
+	public String getPrimaryEmail() {
+		return primaryEmail;
 	}
+
 	/**
-	 * Setter of primary_email.
-	 * @param primary_email
+	 * Setter of primaryEmail.
+	 * @param primaryEmail
 	 */
-	public void setPrimary_email(String primary_email) {
-		this.primary_email = primary_email;
+	public void setPrimaryEmail(String primaryEmail) {
+		this.primaryEmail = primaryEmail;
 	}
+
 	/**
-	 * Getter of alternative_email.
+	 * Getter of alternativeEmail.
 	 * @return @{link String}
 	 */
-	public String getAlternative_email() {
-		return this.alternative_email;
+	public String getAlternativeEmail() {
+		return alternativeEmail;
 	}
+
 	/**
-	 * Setter of alternative_email.
-	 * @param alternative_email
+	 * Setter of alternativeEmail.
+	 * @param alternativeEmail
 	 */
-	public void setAlternative_email(String alternative_email) {
-		this.alternative_email = alternative_email;
+	public void setAlternativeEmail(String alternativeEmail) {
+		this.alternativeEmail = alternativeEmail;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String toString() {
+		return "Email(" 
+				+ id + "): [Primary Email - " 
+				+ primaryEmail + ", Alternative Email - "
+				+ alternativeEmail + "]";
 	}
 }

@@ -4,30 +4,30 @@ import java.io.Serializable;
 
 /**
  * Domain Class {@link Phone}.
+ * @author Ting Chen
  * @author Mengchao Zhong
  */
 public class Phone implements Serializable {
-
+	
 	/**
 	 * Default Serial Version UID.
 	 */
 	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Phone ID.
+	 */
+	private int id;
 	
 	/**
-	 * Type of current phone number.
-	 * e.g. HOME/CELL/WORK
+	 * Phone Type.
 	 */
-	private String phoneType;
-	
+	private String type;
+ 
 	/**
-	 * Phone number.
+	 * Phone Number.
 	 */
-	private String phoneNumber;
-	
-	/**
-	 * Is primary phone number?
-	 */
-	private Boolean primaryPhone;
+	private String number;
 	
 	/**
 	 * Constructor of {@link Phone}.
@@ -38,63 +38,63 @@ public class Phone implements Serializable {
 
 	/**
 	 * Constructor of {@link Phone}.
-	 * @param phoneType
-	 * @param phoneNumber
-	 * @param primaryPhone
+	 * @param id
+	 * @param type
+	 * @param number
 	 */
-	public Phone(String phoneType, String phoneNumber, Boolean primaryPhone) {
+	public Phone(int id, String type, String number) {
 		super();
-		this.phoneType = phoneType;
-		this.phoneNumber = phoneNumber;
-		this.primaryPhone = primaryPhone;
+		this.id = id;
+		this.type = type;
+		this.number = number;
 	}
 
 	/**
-	 * Getter of phoneType.
+	 * Getter of id.
+	 * @return @{link int}
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * Setter of id.
+	 * @param id
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * Getter of type.
 	 * @return @{link String}
 	 */
-	public String getPhoneType() {
-		return phoneType;
+	public String getType() {
+		return type;
 	}
 
 	/**
-	 * Setter of phoneType.
-	 * @param phoneType
+	 * Setter of type.
+	 * @param type
 	 */
-	public void setPhoneType(String phoneType) {
-		this.phoneType = phoneType;
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	/**
-	 * Getter of phoneNumber.
+	 * Getter of number.
 	 * @return @{link String}
 	 */
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public String getNumber() {
+		return number;
 	}
 
 	/**
-	 * Setter of phoneNumber.
-	 * @param phoneNumber
+	 * Setter of number.
+	 * @param number
 	 */
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-
-	/**
-	 * Getter of primaryPhone.
-	 * @return @{link Boolean}
-	 */
-	public Boolean getPrimaryPhone() {
-		return primaryPhone;
-	}
-
-	/**
-	 * Setter of primaryPhone.
-	 * @param primaryPhone
-	 */
-	public void setPrimaryPhone(Boolean primaryPhone) {
-		this.primaryPhone = primaryPhone;
+	public void setNumber(String number) {
+		this.number = number;
 	}
 
 	/**
@@ -102,9 +102,9 @@ public class Phone implements Serializable {
 	 */
 	@Override
 	public String toString() {
-		return "Phone [" 
-				+ phoneType + ": " 
-				+ phoneNumber + ", primary: " 
-				+ primaryPhone + "]";
+		return "Phone(" 
+				+ id + "): [" 
+				+ type + " - " 
+				+ number + "]";
 	}
 }
