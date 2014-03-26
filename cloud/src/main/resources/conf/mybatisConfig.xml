@@ -7,5 +7,7 @@
 	</settings>
 	<mappers>
 		<mapper resource="mybatis/AddressMapper.xml" />
+		<mapper resource="mybatis/ContactMapper.xml" />
+		<mapper resource="mybatis/CredentialMapper.xml" />
 	</mappers>
 </configuration>
