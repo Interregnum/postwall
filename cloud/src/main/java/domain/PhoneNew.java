@@ -65,5 +65,14 @@ public class Phone implements Serializable{
 	public void setNumber(String number) {
 		this.number = number;
 	}
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String toString() {
+		return "Phone [" 
+				+ phoneType + ": " 
+				+ phoneNumber + "]";
+	}
 	
 }
