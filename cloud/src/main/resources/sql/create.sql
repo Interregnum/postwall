@@ -10,7 +10,7 @@ CREATE TABLE email
 CREATE TABLE security_question
 (
 	id			INT				AUTO_INCREMENT,
-	question	VARCHAR(500)	NOT NULL,
+	question	VARCHAR(250)	NOT NULL,
 	PRIMARY KEY (id),
 	UNIQUE (question)
 );
@@ -20,7 +20,6 @@ CREATE TABLE phone
 	id			INT				AUTO_INCREMENT,
 	type		VARCHAR(10)		DEFAULT 'Undefined',
 	number		VARCHAR(20)		NOT NULL,
-	isPrimary	BOOLEAN			DEFAULT false,
 	PRIMARY KEY (id),
 	UNIQUE (number)
 );
@@ -65,7 +64,7 @@ CREATE TABLE contact
 	phone_3_id		INT,
 	address_id		INT,
 	email_id		INT 	NOT NULL,
-	UNIQUE (user_id, phone_id, address_id, email_id),
+	UNIQUE (user_id, phone_1_id, address_id, email_id),
 	FOREIGN KEY (user_id) REFERENCES credential(user_id),
 	FOREIGN KEY (phone_1_id) REFERENCES phone(id),
 	FOREIGN KEY (phone_2_id) REFERENCES phone(id),
