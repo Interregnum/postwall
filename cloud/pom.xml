@@ -19,6 +19,8 @@
 		<junit.version>4.11</junit.version>
 		<mockito.version>1.9.5</mockito.version>
 		<log4j.version>2.0-rc1</log4j.version>
+		<mybatis.version>3.2.5</mybatis.version>
+		<mybatis-spring.version>1.2.2</mybatis-spring.version>
 	</properties>
 	<!-- Artifacts Version Ends-->
 
@@ -83,7 +85,7 @@
 		</dependency>
 		<!-- Testing Artifacts Ends -->
 		
-		<!-- Logging Artifacts Ends -->
+		<!-- Logging Artifacts Starts -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
@@ -96,5 +98,19 @@
 			<version>${log4j.version}</version>
 		</dependency>
 		<!-- Logging Artifacts Ends -->
+		
+		<!-- Database Artifacts Starts -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis-spring.version}</version>
+		</dependency>
+		<!-- Database Artifacts Ends -->
 	</dependencies>
 </project>
