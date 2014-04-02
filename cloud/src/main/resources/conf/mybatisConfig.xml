@@ -9,5 +9,8 @@
 		<mapper resource="mybatis/AddressMapper.xml" />
 		<mapper resource="mybatis/ContactMapper.xml" />
 		<mapper resource="mybatis/CredentialMapper.xml" />
+		<mapper resource="mybatis/EmailMapper.xml" />
+		<mapper resource="mybatis/PhoneMapper.xml" />
+		<mapper resource="mybatis/SecurityQuestionMapper.xml" />
 	</mappers>
 </configuration>
