@@ -1,9 +1,8 @@
 package dao.mapper;
 
 /**
- * Interface of Security Question Mapper
- * @author TING CHEN.
- *
+ * Interface of Security Question Mapper.
+ * @author TING CHEN
  */
 public interface SecurityQuestionMapper {
 
