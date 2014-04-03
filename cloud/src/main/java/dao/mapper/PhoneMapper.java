@@ -1,6 +1,7 @@
 package dao.mapper;
 
 /**
+ * Interface of Phone Mapper
  * @author TING CHEN.
  *
  */
