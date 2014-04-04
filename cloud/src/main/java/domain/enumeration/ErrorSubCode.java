@@ -8,7 +8,8 @@ package domain.enumeration;
 public enum ErrorSubCode {
 
 	/** ----- Enum starts ----- */
-	NULL_POINTER("PSWL_001");
+	NULL_POINTER("NULL POINTER EXCEPTION OCCURED"),
+	USER_NOT_AUTHENTICATED("USER IS NOT AUTHENTICATED DUE TO INVALID USERNAME/PASSWORD");
 	/** ----- Enum ends ----- */
 	
 	/**

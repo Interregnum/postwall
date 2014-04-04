@@ -2,9 +2,14 @@ package service.login;
 
 import java.util.Map;
 
-import domain.exception.ApplicationException;
+import javax.annotation.Resource;
 
 import service.AbstractRestService;
+import dao.mapper.CredentialMapper;
+import domain.Credential;
+import domain.enumeration.ErrorSubCode;
+import domain.exception.ApplicationException;
+import domain.exception.service.AuthorizationException;
 
 /**
  * ReST Service - Login.
@@ -13,6 +18,9 @@ import service.AbstractRestService;
 public class LoginService extends AbstractRestService {
 
 	private Integer privilegeLevel;
+	
+	@Resource
+	private CredentialMapper credentialMapper;
 	
 	/**
 	 * {@inheritDoc}
@@ -29,6 +37,16 @@ public class LoginService extends AbstractRestService {
 	@Override
 	public Map<String, Object> executeService(Map<String, Object> requestMap) throws ApplicationException {
 		checkAuthorization(privilegeLevel);
+		String username = (String) requestMap.get("username");
+		String password = (String) requestMap.get("password");
+		Credential credential = credentialMapper.selectCredentialByUsername(username);
+		if(credential != null && password.equals(credential.getPassword())) {
+			
+		}
+		else {
+			throw AuthorizationException.unauthorized(
+					ErrorSubCode.USER_NOT_AUTHENTICATED, LoginService.class.getName());
+		}
 		return null;
 	}
 

@@ -42,7 +42,7 @@
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
 	
-	<bean id="securityquestionMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	<bean id="securityQuestionMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
 		<property name="mapperInterface" value="dao.mapper.SecurityQuestionMapper"/>
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
